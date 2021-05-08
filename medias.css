@@ -1,0 +1,11 @@
+@media screen and (max-height: 750px) {
+
+    #presentation {
+        height: 100%;
+    }
+
+    #presentation .right {
+        height: 100%;
+    }
+    
+}

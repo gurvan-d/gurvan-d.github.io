@@ -1,0 +1,318 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "RobotoLight";
+    src: url("/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeue-Regular.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ECF0F1;
+
+    color: #000;
+    font-family: "RobotoLight", sans-serif;
+    font-size: 1em;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* NAVBAR */
+
+nav {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    background-color: #212121;
+    transition: top 2s;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 25px;
+}
+
+nav li:nth-child(1) { margin-left: 0; }
+
+nav a {
+    position: relative;
+    padding: 3px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover:before {
+    visibility: visible;
+    width: 100%;
+    left: 0;
+}
+
+/* PRESENTATION */
+
+#presentation {
+    display: flex;
+    background-color: #212121;
+    color: #fff;
+    height: calc(100vh - 50px);
+}
+
+#presentation .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#presentation .left {
+    width: 35%;
+    background-color: #fff;
+    padding: 25px 0;
+    border-radius: 15px;
+    text-align: center;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+#presentation .profile {
+    width: 90%;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+#presentation .infos { line-height: 30px; text-align: center; }
+#presentation .infos a { color: #000; }
+
+#presentation .social-links {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: 15px auto;
+}
+
+#presentation .social-icon { width: 40px; transition: transform 0.5s; }
+#presentation .social-icon:hover { transform: scale(1.1) rotate(10deg); }
+
+#presentation .btn-cv {
+    padding: 7px 15px;
+    background: linear-gradient(to right, #0066FF, #00CC33);
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+#presentation .right {
+    width: 55%;
+    height: calc(100vh - 25px);
+    max-height: 700px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#presentation h1 {
+    margin: 0;
+    font-size: 5.5em;
+    text-align: center;
+    font-family: "BebasNeue", "Roboto", sans-serif;
+    letter-spacing: 4px;
+}
+
+#presentation h2 {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: "BebasNeue", "Roboto", sans-serif;
+    letter-spacing: 3px;
+}
+
+#presentation p {
+    margin: 0;
+    text-align: justify;
+}
+
+#presentation .formation {
+    width: 90%;
+    margin: 5px auto 15px auto;
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212121;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+#presentation .formation .date {
+    width: 25%;
+    text-align: center;
+}
+
+#presentation .formation .info {
+    width: 75%;
+}
+
+#presentation .formation .title {
+    margin: 0;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* COMPETENCES */
+
+#competences .container {
+    display: block;
+    padding-top: 25px;
+}
+
+.competence {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.competence .icon { width: 225px; transition: transform 0.5s; }
+.competence .icon:hover { transform: scale(1.02) rotate(5deg); }
+.competence .icon:nth-child(2n+1) { margin-right: 25px; }
+.competence .icon:nth-child(2n) { margin-left: 25px; }
+
+.competence .block {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.5s;
+}
+
+.competence .block:hover { 
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.competence h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.competence p { text-align: center; }
+
+.competence ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.competence li {
+    flex-basis: 50%;
+    line-height: 30px;
+}
+
+/* PROJETS */
+
+#projets .container {
+    display: block;
+}
+
+#projets .cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#projets .card {
+    width: 450px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.5s;
+    border-radius: 15px;
+}
+
+#projets .card:hover { 
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#projets .illustration {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px 15px 0 0;
+}
+
+#projets h3 {
+    text-align: center;
+    font-size: 1.35em;
+}
+
+#morpion .illustration { background: url("img/morpion.png") no-repeat center/cover; }
+#velo .illustration { background: url("img/arduino.jpg") no-repeat center/cover; }
+#teletravail .illustration { background: url("img/site_teletravail.png") no-repeat center/cover; }
+#restaurant .illustration { background: url("img/projet_s2.png") no-repeat center/cover; }
+
+#projets .projetInfo {
+    display: none;
+    width: 100%;
+    max-width: 1000px;
+    position: fixed;
+    top: 40%;
+    z-index: 100;
+    padding: 0 15px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+#infos-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
